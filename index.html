@@ -33,6 +33,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
 
+
+    <!-- Animate On Scroll - jQuery Plugins -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
@@ -71,7 +75,6 @@
       </nav>
 
       <div class="extra-nav">
-        `
         <a class="main-nav-link" href="login.html">Log In</a>
         <a class="main-nav-link sign-up" href="signup.html">Sign Up</a>
         <a id="cart"
@@ -92,7 +95,7 @@
       <!-- Section Hero Start -->
       <section class="section-hero">
         <div class="hero">
-          <div class="hero-text-box">
+          <div class="hero-text-box" data-aos="fade-right">
             <h1 class="heading-primary">
               Experience guilt-free indulgence with our healthy bakery. Treat
               yourself today
@@ -119,7 +122,7 @@
               </p>
             </div>
           </div>
-          <div class="hero-img-box">
+          <div class="hero-img-box" data-aos="fade-left">
             <picture>
               <source srcset="img/hero-glr.webp" type="image/webp" />
               <source srcset="img/hero-gallery.png" type="image/png" />
@@ -135,7 +138,7 @@
       <!-- Section About US Start -->
 
       <section class="section-about" id="about">
-        <div class="container">
+        <div class="container" data-aos="zoom-in">
           <span class="subheading">About Us</span>
           <h2 class="heading-secondary">
             Partnering for Quality: Our Three-Part Approach to Baking Excellence
@@ -144,7 +147,7 @@
 
         <div class="container grid grid--2-cols grid--center-v">
           <!-- about 01 -->
-          <div class="about-text-box">
+          <div class="about-text-box" data-aos="fade-right">
             <p class="about-number">01</p>
             <h3 class="heading-tertiary">
               Delicious and Nutritious Baked Goods
@@ -157,7 +160,7 @@
             </p>
           </div>
 
-          <div class="about-img-box">
+          <div class="about-img-box" data-aos="fade-left">
             <img
               src="img/about-us/about-us-1.png"
               class="about-img"
@@ -166,14 +169,14 @@
           </div>
 
           <!-- about 02 -->
-          <div class="about-img-box">
+          <div class="about-img-box" data-aos="fade-right">
             <img
               src="img/about-us/about-us-2.png"
               class="about-img"
               alt="Wheat"
             />
           </div>
-          <div class="about-text-box">
+          <div class="about-text-box" data-aos="fade-left">
             <p class="about-number">02</p>
             <h3 class="heading-tertiary">
               Quality and Taste: Our Commitment to You
@@ -186,7 +189,7 @@
           </div>
 
           <!-- about 03 -->
-          <div class="about-text-box">
+          <div class="about-text-box" data-aos="fade-right">
             <p class="about-number">03</p>
             <h3 class="heading-tertiary">
               Our Story: From Humble Beginnings to a Respected Name
@@ -199,7 +202,7 @@
               at our bakery!
             </p>
           </div>
-          <div class="about-img-box">
+          <div class="about-img-box" data-aos="fade-left">
             <img
               src="img/about-us/about-us-3.png"
               class="about-img about-us-3-fix"
@@ -215,8 +218,8 @@
 
       <section class="section-featured" id="featured">
         <div class="container">
-          <h2 class="heading-featured-in">in collaboration with</h2>
-          <div class="logos">
+          <h2 class="heading-featured-in" data-aos="fade-down">in collaboration with</h2>
+          <div class="logos" data-aos="fade-down">
             <img src="img/logos/chatime-logo-3.png" alt="Logo Chatime" />
             <img
               src="img/logos/kopi-kenangan-logo-2.png"
@@ -237,7 +240,7 @@
       <!-- Section Range of Product Start -->
 
       <section class="section-meals" id="meals">
-        <div class="container center-text">
+        <div class="container center-text" data-aos="zoom-in">
           <span class="subheading">range of products</span>
           <h2 class="heading-secondary">
             Healthy breads and cakes without compromising on deliciousness
@@ -245,7 +248,7 @@
         </div>
 
         <div class="container grid grid--3-cols margin-bottom-md">
-          <div class="product-range">
+          <div class="product-range" data-aos="fade-down">
             <img
               src="img/meals/bread.jpg"
               class="product-range-img"
@@ -286,7 +289,7 @@
             </div>
           </div>
 
-          <div class="product-range">
+          <div class="product-range" data-aos="fade-down">
             <img
               src="img/meals/cake.jpg"
               class="product-range-img"
@@ -328,7 +331,7 @@
             </div>
           </div>
 
-          <div class="diets">
+          <div class="diets" data-aos="fade-left">
             <h3 class="heading-tertiary">Works with any diet:</h3>
             <ul class="list">
               <li class="list-item">
@@ -359,7 +362,7 @@
           </div>
         </div>
 
-        <div class="container all-recipes">
+        <div class="container all-recipes" data-aos="zoom-in">
           <a href="products.html" class="link">See all products &rarr;</a>
         </div>
       </section>
@@ -369,12 +372,12 @@
       <!-- Section Our Team Start -->
 
       <section class="section-team" id="team">
-        <div class="main-heading">
+        <div class="main-heading" data-aos="zoom-out">
           <span class="subheading">Our Master Chef</span>
           <p class="heading-secondary">We're professional at our skills</p>
         </div>
         <div class="box-container">
-          <div class="box">
+          <div class="box" data-aos="zoom-in">
             <div class="image">
               <img src="img/team/darren.jpg" alt="Foto Darren" />
             </div>
@@ -400,7 +403,7 @@
             </div>
           </div>
 
-          <div class="box">
+          <div class="box" data-aos="zoom-in">
             <div class="image">
               <img src="img/team/baskoro.jpg" alt="Foto Baskoro" />
             </div>
@@ -421,7 +424,7 @@
             </div>
           </div>
 
-          <div class="box">
+          <div class="box" data-aos="zoom-in">
             <div class="image">
               <img src="img/team/saad-3.png" id="saad" alt="Foto Saad" />
             </div>
@@ -451,22 +454,22 @@
 
       <section class="section-statistic" id="statistic">
         <div class="container grid grid--4-cols">
-          <div class="statistic">
+          <div class="statistic" data-aos="fade-up">
             <ion-icon class="statistic-icon" name="people"></ion-icon>
             <p class="statistic-title">67</p>
             <p class="statistic-text">Skilled Proffesional</p>
           </div>
-          <div class="statistic">
+          <div class="statistic" data-aos="fade-down">
             <ion-icon class="statistic-icon" name="cart"></ion-icon>
             <p class="statistic-title">7324</p>
             <p class="statistic-text">Avg Order per Day</p>
           </div>
-          <div class="statistic">
+          <div class="statistic" data-aos="fade-up">
             <ion-icon class="statistic-icon" name="storefront"></ion-icon>
             <p class="statistic-title">42</p>
             <p class="statistic-text">Branch Shop</p>
           </div>
-          <div class="statistic">
+          <div class="statistic" data-aos="fade-down">
             <ion-icon class="statistic-icon" name="star"></ion-icon>
             <p class="statistic-title">4.85</p>
             <p class="statistic-text">Avg Rating</p>
@@ -480,13 +483,13 @@
 
       <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
-          <span class="subheading">Customer Testimonials</span>
-          <h2 class="heading-secondary">
+          <span class="subheading" data-aos="fade-down">Customer Testimonials</span>
+          <h2 class="heading-secondary" data-aos="fade-up">
             Once you try it, you'll never settle for less!
           </h2>
 
           <div class="testimonials">
-            <figure class="testimonial">
+            <figure class="testimonial"  data-aos="fade-right">
               <img
                 class="testimonial-img"
                 alt="Photo of customer Geril"
@@ -499,7 +502,7 @@
               <p class="testimonial-name">&mdash; Raden Gheryl</p>
             </figure>
 
-            <figure class="testimonial">
+            <figure class="testimonial"  data-aos="fade-right">
               <img
                 class="testimonial-img"
                 alt="Photo of customer Rehan"
@@ -512,7 +515,7 @@
               <p class="testimonial-name">&mdash; Rayhan Alfarizi</p>
             </figure>
 
-            <figure class="testimonial">
+            <figure class="testimonial"  data-aos="fade-left">
               <img
                 class="testimonial-img"
                 alt="Photo of customer Asadel"
@@ -526,7 +529,7 @@
               <p class="testimonial-name">&mdash; Satrio Asadel</p>
             </figure>
 
-            <figure class="testimonial">
+            <figure class="testimonial"  data-aos="fade-left">
               <img
                 class="testimonial-img"
                 alt="Photo of customer Farras"
@@ -542,7 +545,7 @@
           </div>
         </div>
 
-        <div class="gallery">
+        <div class="gallery" data-aos="zoom-in">
           <figure class="gallery-item">
             <img
               src="img/gallery/g1.jpg"
@@ -703,7 +706,7 @@
           </div>
         </div>
       </section>
-      <!-- Section Message Us Start -->
+      <!-- Section Message Us End -->
     </main>
 
     <footer class="footer">
@@ -790,6 +793,13 @@
     <button id="scroll-top" onclick="topFunction()">&uarr;</button>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 600,
+      });
+    </script>
     <script src="js/jquery.js"></script>
     <script src="js/script.js"></script>
   </body>

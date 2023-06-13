@@ -15,7 +15,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .main-nav-link:link,
+  .main-link:link,
   .main-nav-link:visited {
     font-size: 1.6rem;
   }
@@ -314,6 +314,14 @@
   }
 
   .logos img {
-    height: 3rem;
+    height: 2.2rem;
+  }
+
+  .main-nav-link:link {
+    font-size: 1.65rem;
+  }
+
+  .nav-logo {
+    font-size: 2.5rem;
   }
 }
