@@ -39,9 +39,9 @@ body {
   overflow-x: hidden;
 }
 
-/********************************************/
+/*******************************************************************************/
 /* Komponen-komponen yang bisa digunain lagi (Reusable) - bisa buat template */
-/*******************************************/
+/*******************************************************************************/
 
 .container {
   /* 1140px */
@@ -81,7 +81,7 @@ body {
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
-  font-family:"Playfair Display",serif;
+  font-family:"Playfair Display", serif;
   font-weight: 700;
   color: #333;
   letter-spacing: -0.5px;
