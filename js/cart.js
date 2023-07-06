@@ -1,87 +1,188 @@
-let openShopping = document.querySelector('.shopping');
+let cart = document.querySelector('#cart');
 let closeShopping = document.querySelector('.closeShopping');
-let list = document.querySelector('.list');
+let list = document.querySelector('.container-ass');
 let listCard = document.querySelector('.listCard');
 let body = document.querySelector('body');
 let total = document.querySelector('.total');
 let quantity = document.querySelector('.quantity');
 
-openShopping.addEventListener('click', ()=>{
-    body.classList.add('active');
+
+
+cart.addEventListener('click', ()=>{
+    body.classList.add('active'); //ketika class .shopping di klik maka body/tubuh akan memiliki class = "active"
 })
 closeShopping.addEventListener('click', ()=>{
-    body.classList.remove('active');
+    body.classList.remove('active');//ketika class .shopping di klik maka class = "active" pada tubuh akan dihapus
 })
+
+// kesimpulan = kita bisa menambahkan class pada sebuah element (body,div,section) dan bahkan kita bisa menambahkan sebuah class dengan class kedua, dimana kita
+//hanya perlu mengidentifikasi class yg ingin kita tambahkan jumlah classnya dalam kondisi tertentu 
 
 let products = [
     {
-        id: 1,
-        name: 'PRODUCT NAME 1',
-        image: '1.PNG',
-        price: 120000
-    },
-    {
-        id: 2,
-        name: 'PRODUCT NAME 2',
-        image: '2.PNG',
-        price: 120000
-    },
-    {
-        id: 3,
-        name: 'PRODUCT NAME 3',
-        image: '3.PNG',
-        price: 220000
+        id: 4,
+        image: 'gallery/g1.jpg',
+        jenis1: "Low Sugar",
+        name:  'Strawberry Cake',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 37000
     },
     {
         id: 4,
-        name: 'PRODUCT NAME 4',
-        image: '4.PNG',
-        price: 123000
+        image: 'gallery/g2.jpg',
+        jenis1: "Low Sugar",
+        name:  'Chocolate Cupcake',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 28000
     },
     {
-        id: 5,
-        name: 'PRODUCT NAME 5',
-        image: '5.PNG',
-        price: 320000
+        id: 4,
+        image: 'gallery/g3.jpg',
+        jenis1: "Low Sugar",
+        name:  'Wheat Bread',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 42000
     },
     {
-        id: 6,
-        name: 'PRODUCT NAME 6',
-        image: '6.PNG',
-        price: 120000
-    }
-];
+        id: 4,
+        image: 'gallery/g4.jpg',
+        jenis1: "Low Sugar",
+        name:  'Classic Bread',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 66000
+    },
+    {
+        id: 4,
+        image: 'gallery/g5.jpg',
+        jenis1: "Low Sugar",
+        name:  'Raisin Cake',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 26000
+    },
+    {
+        id: 4,
+        image: 'gallery/g6.jpg',
+        jenis1: "Low Sugar",
+        name:  'Ginger Bread',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 35000
+    },
+    {
+        id: 4,
+        image: 'gallery/g7.jpg',
+        jenis1: "Low Sugar",
+        name:  'Pink Cupcake',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 33000
+    },
+    {
+        id: 4,
+        image: 'gallery/g8.jpg',
+        jenis1: "Low Sugar",
+        name:  'Croussaint',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 43000
+    },
+    {
+        id: 4,
+        image: 'gallery/g9.jpg',
+        jenis1: "Low Sugar",
+        name: 'Pastry',
+        jenis3 : "280-900",
+        jenis4 : "calories",
+        jenis5 : "4.9",
+        jenis6 : "rating (537)",
+        price: 30000
+    },
 
-let listCards  = [];
+];
+let listCards  = [];// PENDECLARE-AN ARRAY UNTUK NANTINYA AKAN DIGUNAKAN UNTUK .card  (halaman shopping card)
 
 function initApp(){
     products.forEach((value, key) =>{
         let newDiv = document.createElement('div');
-        newDiv.classList.add('item');
+        newDiv.classList.add('product-range1');
         newDiv.innerHTML = `
-            <img src="image/${value.image}">
-            <div class="title">${value.name}</div>
-            <div class="price">${value.price.toLocaleString()}</div>
-            <button onclick="addToCard(${key})">Add To Card</button>`;
+        
+        <img
+        src="img/${value.image}"
+        class="product-range-img1"
+        alt="Bread Products"
+      />
+      <div class="product-range-content">
+        <div class="product-range-tags">
+          <span class="tag tag--vegetarian">${value.jenis1}</span>
+        </div>
+        <p class="product-range-title">${value.name}</p>
+        <ul class="product-range-attributes">
+          <li class="product-range-attribute">
+            <ion-icon
+              class="product-range-icon"
+              name="flame-outline"
+            ></ion-icon>
+            <span><strong>${value.jenis3}</strong> ${value.jenis4}</span>
+          </li>
+         
+          <li class="product-range-attribute">
+            <ion-icon
+              class="product-range-icon"
+              name="star-outline"
+            ></ion-icon>
+            <span><strong>${value.jenis5}</strong> ${value.jenis6}</span>
+          </li>
+          <li class="product-range-attribute">
+            <span class="product-range-icon">Rp</span>
+            <span>${value.price}</span>
+          </li>
+        </ul>
+    
+        <button class="add-to-cart-button" onclick="addToCard(${key})">
+          <span>Add to Cart</span>
+        </button>
+    
+      </div>
+            `;
         list.appendChild(newDiv);
     })
 }
 initApp();
-function addToCard(key) {
-    if (listCards[key] == null) {
-      // copy product from list to list card
-      var product = products[key];
-      listCards[key] = {
-        image: product.image,
-        name: product.name,
-        price: product.price,
-        quantity: 1
-      };
+
+function addToCard(key){
+    if(listCards[key] == null){
+        listCards[key] = {
+            id: products[key].id,
+            name: products[key].name,
+            image: products[key].image,
+            price: products[key].price,
+            quantity: 1
+        };
     }
     reloadCard();
-  }
-  
-
+}
 function reloadCard(){
     listCard.innerHTML = '';
     let count = 0;
@@ -92,9 +193,9 @@ function reloadCard(){
         if(value != null){
             let newDiv = document.createElement('li');
             newDiv.innerHTML = `
-                <div><img src="image/${value.image}"/></div>
-                <div>${value.name}</div>
-                <div>${value.price.toLocaleString()}</div>
+                <div><img src="img/${value.image}"></div>
+                <div class="title">${value.name}</div>
+                <div class="price">${value.price.toLocaleString()}</div>
                 <div>
                     <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
