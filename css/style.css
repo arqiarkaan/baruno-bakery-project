@@ -373,15 +373,6 @@
   color: #e67e22;
 }
 
-.product-range-img {
-  width: 34rem;
-  height: 21rem;
-}
-.product-range-img1 {
-  width: 28rem;
-  height: 21rem;
-}
-
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
@@ -866,29 +857,24 @@
   opacity: 1 !important;
 }
 
-
-
-
-
-
-.card{
+.card {
   position: fixed;
-  top:10vh;
+  top: 10vh;
   left: 100%;
   width: 500px;
-  background-color:   #fdf2e9 ;
+  background-color: #fdf2e9;
   height: 90vh;
   transition: 0.5s;
   z-index: 9999;
 }
-.active .card{
+.active .card {
   left: calc(100% - 500px);
 }
-.active .container{
- transform: translateX(-200px);
+.active .container {
+  transform: translateX(-200px);
 }
-.card h1{
-  color:  #e67e22 ;
+.card h1 {
+  color: #e67e22;
   font-weight: 100;
   margin: 0;
   padding: 0 20px;
@@ -896,15 +882,14 @@
   display: flex;
   align-items: center;
 }
-.card .checkOut{
+.card .checkOut {
   position: absolute;
   bottom: 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-
 }
-.card .checkOut div{
+.card .checkOut div {
   background-color: #eb984e;
   width: 100%;
   height: 70px;
@@ -914,11 +899,11 @@
   font-weight: bold;
   cursor: pointer;
 }
-.card .checkOut div:nth-child(2){
-  background-color: #e67e22  ;
+.card .checkOut div:nth-child(2) {
+  background-color: #e67e22;
   color: black;
 }
-.listCard li{
+.listCard li {
   display: grid;
   grid-template-columns: 100px repeat(3, 1fr);
   color: black;
@@ -927,37 +912,36 @@
   margin-bottom: 10px;
   margin-left: 10px;
 }
-.listCard li div{
+.listCard li div {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.listCard li img{
+.listCard li img {
   width: 90%;
 }
-.listCard li button{
+.listCard li button {
   background-color: #fff5;
   border: none;
   font-size: 20px;
   z-index: 999999;
-  
 }
 .listCard li button:focus {
   outline: none;
   box-shadow: none;
 }
-.listCard .count{
+.listCard .count {
   margin: 0 10px;
 }
 
-.shopping{
+.shopping {
   position: relative;
   text-align: right;
 }
-.shopping img{
+.shopping img {
   width: 40px;
 }
-.shopping span{
+.shopping span {
   background: red;
   border-radius: 50%;
   display: flex;
@@ -973,19 +957,19 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-.total{
+.total {
   font-size: 15px;
   padding: 0;
-  margin:0;
+  margin: 0;
   border: 0;
 }
-.closeShopping{
+.closeShopping {
   font-size: 12px;
   padding: 0;
-  margin:0;
+  margin: 0;
   border: 0;
 }
-.container-ass{
+.container-ass {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 50px;
@@ -995,3 +979,24 @@
   padding-left: 50px;
 }
 
+/* Media query buat product */
+
+@media (max-width: 1300px) {
+  .container-ass {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .container-ass {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .container-ass {
+    grid-template-columns: repeat(1, 30rem);
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
