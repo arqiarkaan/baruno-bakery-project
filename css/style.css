@@ -979,6 +979,11 @@
   padding-left: 50px;
 }
 
+.product-range-img {
+  width: 40rem;
+  height: 21rem;
+  object-fit: cover;
+}
 /* Media query buat product */
 
 @media (max-width: 1300px) {
